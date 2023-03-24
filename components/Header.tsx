@@ -39,7 +39,7 @@ function Header() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           loading='lazy'
-          src='/person.jpg'
+          src='/text-editor/person.jpg'
           alt='person'
           className='object-cover cursor-pointer rounded-full h-10 w-10'
         />
