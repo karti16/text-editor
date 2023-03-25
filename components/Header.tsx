@@ -19,7 +19,7 @@ function Header() {
           <DescriptionIcon className='text-[30px]' />
         </IconButton>
         <a href='' className='ml-2 text-gray-500 text-lg cursor-pointer focus:underline'>
-          Docs__
+          Docs
         </a>
       </div>
 
