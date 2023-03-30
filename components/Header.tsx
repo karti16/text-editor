@@ -9,7 +9,7 @@ import { getAssetUrl } from '../utils/assetUrl';
 function Header() {
   console.log(process.env.NODE_ENV);
   return (
-    <div className=' flex sticky top-0 z-50 px-4 py-2  shadow-md bg-white justify-between'>
+    <header className=' flex sticky top-0 z-50 px-4 py-2  shadow-md bg-white justify-between'>
       {/* 2 icons */}
       <div className='flex items-center'>
         <IconButton className='h-12 w-12 border-0 text-xl text-gray-500'>
@@ -46,7 +46,7 @@ function Header() {
           className='object-cover cursor-pointer rounded-full h-10 w-10'
         />
       </div>
-    </div>
+    </header>
   );
 }
 
