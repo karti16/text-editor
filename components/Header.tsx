@@ -4,8 +4,10 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import AppsIcon from '@mui/icons-material/Apps';
 import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
+import { getAssetUrl } from '../utils/assetUrl';
 
 function Header() {
+  console.log(process.env.NODE_ENV);
   return (
     <div className=' flex sticky top-0 z-50 px-4 py-2  shadow-md bg-white justify-between'>
       {/* 2 icons */}
@@ -39,7 +41,7 @@ function Header() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           loading='lazy'
-          src='/person.jpg'
+          src={getAssetUrl('person.jpg')}
           alt='person'
           className='object-cover cursor-pointer rounded-full h-10 w-10'
         />
