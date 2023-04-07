@@ -9,6 +9,7 @@ function Login() {
       <img loading='lazy' src={getAssetUrl('home-logo.png')} alt='home-logo' className='object-cover h-56 w-56' />
       <Button
         variant='contained'
+        className="bg-blue-500"
         onClick={() => {
           signIn();
         }}
