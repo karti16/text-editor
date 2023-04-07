@@ -3,8 +3,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import TopSection from '../components/TopSection';
 import DocList from '@/components/DocList';
-import { useState } from 'react';
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession, getSession } from 'next-auth/react';
 import Login from '@/components/Login';
 
 export default function Home() {
@@ -24,4 +23,14 @@ export default function Home() {
       <DocList />
     </>
   );
+}
+
+export async function getServerSideProps(context: any) {
+  const session = await getSession(context);
+
+  return {
+    props: {
+      session,
+    },
+  };
 }

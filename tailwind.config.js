@@ -2,9 +2,9 @@
 
 module.exports = {
   corePlugins: {
-    preflight: false,
+    // preflight: false,
   },
-  important: '#__next',
+  // important: '#__root',
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',

@@ -5,8 +5,10 @@ import AppsIcon from '@mui/icons-material/Apps';
 import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
 import { getAssetUrl } from '../utils/assetUrl';
+import { useSession, signOut } from 'next-auth/react';
 
 function Header() {
+  const { data: session } = useSession();
   console.log(process.env.NODE_ENV);
   return (
     <header className=' flex sticky top-0 z-50 px-4 py-2  shadow-md bg-white justify-between'>
@@ -41,9 +43,13 @@ function Header() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           loading='lazy'
-          src={getAssetUrl('person.jpg')}
+          // src={getAssetUrl('person.jpg')}
+          src={session?.user?.image || getAssetUrl('person.jpg')}
           alt='person'
           className='object-cover cursor-pointer rounded-full h-10 w-10'
+          onClick={() => {
+            signOut();
+          }}
         />
       </div>
     </header>
